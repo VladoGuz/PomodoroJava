@@ -1,0 +1,74 @@
+
+
+
+#Descanso{
+-fx-font-family: Barbaro;
+-fx-font-size: 20pt;
+
+}
+#Enfocado{
+-fx-font-family: Barbaro;
+-fx-font-size: 20pt;
+
+
+}
+#ActividadEnCurso{
+-fx-text-align:center;
+-fx-font-family: Barbaro;
+-fx-font-size: 20pt;
+}
+#MinutosContador{
+
+
+-fx-font-family: "Vanilla Extract";
+-fx-font-size: 30pt;
+}
+.button:hover {
+ -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+
+
+}
+.button:pressed{
+ -fx-scale-x: .9;
+ -fx-scale-y: .9;
+
+}
+#botonConfig{
+
+-fx-background-repeat: no-repeat;
+ -fx-background-position: center;
+
+}
+#botonConfig:pressed{
+-fx-scale-x: 1.4;
+ -fx-scale-y: 1.4;
+
+}
+#boton_saltarActividad{
+-fx-scale-x: .8;
+ -fx-scale-y: .7;
+
+}
+#boton_saltarActividad:pressed{
+-fx-scale-x: .7;
+ -fx-scale-y: .6;
+
+}
+
+.progress-bar {
+    -fx-accent: rgba(35, 209, 96, 0.85);
+}
+
+.progress-bar .bar {
+    -fx-padding: 1px;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.progress-bar > .track {
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-text-box-border: transparent;
+    -fx-control-inner-background: transparent;
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}

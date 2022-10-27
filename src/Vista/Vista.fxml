@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="AnchorPane" focusTraversable="true" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#closePanePressEsc" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: BADEE6;" stylesheets="@../Estilos/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Controller">
+    <Button id="boton_Cambiante" fx:id="boton_cambiante" contentDisplay="CENTER" layoutX="24.0" layoutY="107.0" mnemonicParsing="false" onAction="#decidirAccion" prefHeight="54.0" prefWidth="67.0" style="-fx-background-color: #ABC6CC; -fx-background-radius: 21; -fx-graphic: &quot;/Recursos/play.png&quot;; -fx-border-color: #FFFFFF; -fx-border-radius: 20; -fx-border-width: 2;" stylesheets="@../Estilos/style.css" text="Iniciar" textFill="TRANSPARENT" />
+
+    <Label id="Pomodoro" fx:id="Pomodoro" focusTraversable="false" layoutX="2.0" layoutY="172.0" opacity="0.72" prefHeight="22.0" prefWidth="110.0" textAlignment="CENTER" textFill="#610000" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="172.0">
+        <font>
+            <Font name="Unispace-Bold" size="21.0" />
+        </font>
+    </Label>
+    <TextField id="MinutosContador" fx:id="txt_TextField_MostrarTiempo" alignment="CENTER" editable="false" focusTraversable="false" layoutX="57.0" layoutY="25.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="73.0" prefWidth="186.0" style="-fx-background-color: BADEE6;" text="25:00">
+        <font>
+            <Font name="Impact" size="18.0" />
+        </font>
+    </TextField>
+    <Label id="ActividadEnCurso" fx:id="label_accionActiva" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="96.0" layoutY="114.0" prefWidth="108.0" text="Enfocado">
+        <font>
+            <Font name="SansSerif Bold" size="13.0" />
+        </font>
+    </Label>
+
+    <Button fx:id="boton_reiniciar" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="207.0" layoutY="106.0" mnemonicParsing="false" onAction="#clickReiniciar" prefHeight="54.0" prefWidth="67.0" style="-fx-background-color: #ABC6CC; -fx-background-radius: 21px; -fx-graphic: &quot;/Recursos/reiniciar.png&quot;; -fx-border-color: FFFFFF; -fx-border-radius: 20; -fx-border-width: 2;" text="Reiniciar" textFill="TRANSPARENT" />
+   <Button id="botonConfig" fx:id="boton_Config" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" layoutX="263.0" layoutY="168.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#opciones_MostrarOcultar" prefHeight="22.0" prefWidth="28.0" scaleX="1.5" scaleY="1.5" style="-fx-graphic: &quot;/Recursos/config.png&quot;; -fx-background-color: BADEE6;" />
+   <Button id="boton_saltarActividad" fx:id="boton_saltarActividad" layoutX="132.0" layoutY="158.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#saltarActividad" prefHeight="35.0" prefWidth="35.0" style="-fx-graphic: &quot;/Recursos/skip.png&quot;; -fx-background-color: #DAF4F9; -fx-background-radius: 5px;" />
+    <Pane fx:id="opcionesPane" layoutX="5.0" layoutY="20.0" prefHeight="160.0" prefWidth="290.0" style="-fx-background-color: B3D2D9; -fx-border-color: #000000; -fx-border-radius: 20;" visible="false">
+        <TextField fx:id="TextField_IngresarMinutosDescanso" alignment="BOTTOM_LEFT" layoutX="200.0" layoutY="10.0" minWidth="-Infinity" onKeyPressed="#validarSoloNumeros" prefHeight="40.0" prefWidth="80.0" promptText="Ingresar minutos" style="-fx-background-color: #FAF3DD; -fx-background-radius: 7; -fx-border-color: #5e6472; -fx-border-width: 1.5; -fx-border-radius: 6;" text="5">
+            <font>
+                <Font name="Monospace 821 Bold Italic BT" size="20.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="TextField_IngresarMinutosTrabajo" alignment="BOTTOM_LEFT" layoutX="200.0" layoutY="70.0" minWidth="-Infinity" onKeyPressed="#validarSoloNumeros" prefHeight="40.0" prefWidth="80.0" promptText="Ingresar minutos" style="-fx-background-color: #FAF3DD; -fx-background-radius: 7; -fx-border-color: #5e6472; -fx-border-width: 1.5; -fx-border-radius: 6;" text="25">
+            <font>
+                <Font name="Monospace 821 Bold BT" size="20.0" />
+            </font>
+        </TextField>
+        <Label id="Enfocado" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="70.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="130.0" text="Enfocado : " textAlignment="CENTER">
+            <font>
+                <Font name="Unispace-Bold" size="10.0" />
+            </font>
+        </Label>
+        <Label id="Descanso" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="15.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="130.0" text="Descanso : " textAlignment="CENTER">
+            <font>
+                <Font name="Unispace-Bold" size="10.0" />
+            </font>
+        </Label>
+      <Label layoutX="150.0" layoutY="70.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="50.0" text="min.">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="150.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="50.0" text="min.">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="button_Acept" layoutX="220.0" layoutY="130.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#ocultarVentana" style="-fx-background-color: #5e6472; -fx-background-radius: 5; -fx-text-fill: #FFFFFF;" text="Aceptar" />
+      <Button fx:id="button_Cancel" layoutX="150.0" layoutY="130.0" mnemonicParsing="false" onAction="#cancelarConfiguracion" style="-fx-background-color: #5e6472; -fx-background-radius: 5; -fx-text-fill: #FFFFFF;" text="Cancelar" />
+    </Pane>
+   <ProgressBar fx:id="progressBar" layoutY="1.0" prefHeight="22.0" prefWidth="300.0" progress="0.0" />
+   <CheckBox fx:id="checkbox_AutoStart" layoutX="1.0" layoutY="182.0" mnemonicParsing="false" text="Auto Inicio" />
+
+
+</AnchorPane>

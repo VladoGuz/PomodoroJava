@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.stage.Stage?>
+
+<Stage fx:id="toastStage" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.Notificacion">
+    <scene>
+        <Scene>
+           <AnchorPane prefHeight="60.0" prefWidth="350.0">
+              <Label layoutX="5.0" layoutY="3.0" text="Pomodoro">
+                 <font>
+                    <Font name="Arial" size="21.0" />
+                 </font>
+              </Label>
+              <Label layoutX="5.0" layoutY="34.0" text="Ha finalizado el tiempo UwU">
+                 <font>
+                    <Font size="15.0" />
+                 </font>
+              </Label>
+              <Button layoutX="311.0" layoutY="30.0" mnemonicParsing="false" prefWidth="34.0" style="-fx-background-color: #5e6472;" text="Ok" textFill="WHITE" />
+           </AnchorPane>
+        </Scene>
+    </scene>
+</Stage>
